@@ -58,6 +58,7 @@ c.JupyterHub.hub_port = 8080
 
 # Authenticate users with LDAP
 c.JupyterHub.authenticator_class = 'ldapauthenticator.LDAPAuthenticator'
+c.LDAPAuthenticator.valid_username_regex = '^[A-Za-z0-9]+$'
 c.LDAPAuthenticator.server_address = 'ldap://ldap'
 c.LDAPAuthenticator.server_port = 389
 c.LDAPAuthenticator.bind_dn_template = 'uid={username},ou=people,dc=datarx,dc=cn'
