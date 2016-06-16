@@ -1,0 +1,18 @@
+version: '2'
+services:
+    palan-nginx:
+        container_name: palan-nginx
+        image: nginx
+        volumes:
+           - ./datarx.cn:/etc/nginx/conf.d/datarx.cn
+        extra_hosts:
+           - "console:192.168.3.14"
+           - "studio:192.168.3.14"
+           - "jupyter:192.168.3.242"
+        environment:
+           - NGINX_HOST=datarx.cn
+           - NGINX_PORT=80
+        ports:
+           - 80:80
+        command: /bin/bash -c "envsubst < /etc/nginx/conf.d/datarx.cn > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+

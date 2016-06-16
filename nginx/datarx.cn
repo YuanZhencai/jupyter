@@ -1,0 +1,21 @@
+server
+{
+        listen          80;
+        server_name     localhost ;
+        location /console/ {
+           proxy_pass http://console:7000/;
+        }
+
+        location /studio/ {
+           proxy_pass http://studio:9000/;
+        }
+
+        location /hub/ {
+           proxy_pass http://jupyter:8000/hub/;
+        }
+
+        location /user/ {
+           proxy_pass http://jupyter:8000/user/;
+        }
+
+}
