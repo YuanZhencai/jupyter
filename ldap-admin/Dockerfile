@@ -3,7 +3,7 @@
 # Web UI for LDAP server
 #
 
-FROM daocloud.io/yuanzhencai/ci-base
+FROM ci-base:centos
 MAINTAINER Yuan Zhencai <zhencai.yuan@datarx.cn>
 
 EXPOSE 80
