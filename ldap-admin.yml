@@ -1,0 +1,15 @@
+version: '2'
+services:
+    palan-ldap-admin:
+        container_name: palan-ldap-admin
+        image: ldap-admin:ldap-admin
+        external_links:
+            - palan-ldap:ldap
+        ports:
+            - 8084:80
+
+    palan-ldap:
+        extends:
+            file: ldap.yml
+            service: palan-ldap
+

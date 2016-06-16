@@ -1,0 +1,16 @@
+version: '2'
+services:
+    palan-ldap:
+        container_name: palan-ldap
+        image: ldap:ldap
+        # volumes:
+                #     - ~/volumes/jhipster/PalanConsole/mysql/:/var/lib/mysql/
+        environment:
+            domain: datarx.cn
+            ldap_admin_password: admin
+            system_admin_password: admin
+            user_password: user
+        ports:
+            - 389:389
+            - 636:636
+
