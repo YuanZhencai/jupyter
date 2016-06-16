@@ -3,8 +3,8 @@
 # Web UI for LDAP server
 #
 
-FROM ci-base:centos
-MAINTAINER Kirill Evstigneev <kevstigneev@griddynamics.com>
+FROM daocloud.io/yuanzhencai/ci-base
+MAINTAINER Yuan Zhencai <zhencai.yuan@datarx.cn>
 
 EXPOSE 80
 
