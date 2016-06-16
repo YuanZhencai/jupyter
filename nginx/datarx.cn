@@ -7,15 +7,19 @@ server
         }
 
         location /studio/ {
-           proxy_pass http://studio:9000/;
+           proxy_pass http://studio:8080/;
         }
 
         location /hub/ {
-           proxy_pass http://jupyter:8000/hub/;
+           proxy_pass http://jupyterhub:8000/hub/;
         }
 
         location /user/ {
-           proxy_pass http://jupyter:8000/user/;
+           proxy_pass http://jupyterhub:8000/user/;
+        }
+
+        location /ldap-admin/ {
+           proxy_pass http://ldap-admin:8084/phpldapadmin/;
         }
 
 }
