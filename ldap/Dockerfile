@@ -5,7 +5,7 @@
 # Documentation:
 #  - https://help.ubuntu.com/12.04/serverguide/openldap-server.html
 
-FROM centos:6
+FROM yuanzhencai/ci-base
 MAINTAINER Yuan Zhencai <zhencai.yuan@datarx.cn>
 
 EXPOSE 389

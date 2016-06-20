@@ -3,7 +3,7 @@
 # Web UI for LDAP server
 #
 
-FROM centos:6
+FROM yuanzhencai/ci-base
 MAINTAINER Yuan Zhencai <zhencai.yuan@datarx.cn>
 
 EXPOSE 80
